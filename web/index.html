@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Godwit Context Flight</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="mark">🪶</span>
+        <div>
+          <h1>Godwit Context Flight</h1>
+          <p>Two agents, one long task. Watch context rot ditch one bird and lean curation land the other.</p>
+        </div>
+      </div>
+      <div class="controls">
+        <label class="ctl">
+          <span>Source</span>
+          <select id="source">
+            <option value="mock">mock (no creds)</option>
+            <option value="live">live · Vertex</option>
+            <option value="replay">replay</option>
+          </select>
+        </label>
+        <label class="ctl">
+          <span>Legs <b id="legsVal">10</b></span>
+          <input id="legs" type="range" min="4" max="16" value="10" />
+        </label>
+        <button id="run" class="run">▶ Fly</button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <section class="map-wrap">
+        <canvas id="map"></canvas>
+        <div class="levers" id="levers">
+          <div class="levers-title">Godwit principles</div>
+          <!-- toggles injected by ui.ts -->
+        </div>
+      </section>
+
+      <aside class="rail">
+        <div class="gauges" id="gauges"><!-- two bird panels injected --></div>
+        <div class="logwrap">
+          <div class="log-title">Observe · decision log</div>
+          <div class="log" id="log"></div>
+        </div>
+      </aside>
+    </main>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+.env.local
+*.log
+
+# Recorded golden runs are kept; live-capture scratch is not.
+recordings/*.tmp.jsonl
